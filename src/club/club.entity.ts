@@ -4,7 +4,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 export class Club{
 
     @PrimaryGeneratedColumn()
-    Id : number;
+    Id?: number;
 
     @Column()
     Designation : string;
