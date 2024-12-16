@@ -11,8 +11,13 @@ export class ClubService {
                 private readonly clubRepository : Repository<Club>
                ){}
 
-    public getAllClub() : Promise<Club[]>
+    public findAll() : Promise<Club[]>
     {
       return this.clubRepository.find();
+    }
+
+    public findOne(Id:number) : Promise<Club | null>
+    {
+        return this.clubRepository.findOneBy({Id})
     }
 }
