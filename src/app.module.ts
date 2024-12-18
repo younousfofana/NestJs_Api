@@ -7,6 +7,8 @@ import { PaysModule } from './pays/pays.module';
 import { FactureController } from './facture/facture.controller';
 import { FactureService } from './facture/facture.service';
 import { FactureModule } from './facture/facture.module';
+import { FactureDetailController } from './facture-detail/facture-detail.controller';
+import { FactureDetailModule } from './facture-detail/facture-detail.module';
 
 @Module({
   imports: [
@@ -21,9 +23,10 @@ import { FactureModule } from './facture/facture.module';
     }),
     ClubModule,
     PaysModule,
-    FactureModule
+    FactureModule,
+    FactureDetailModule
   ],
-  controllers: [AppController, FactureController],
+  controllers: [AppController, FactureController, FactureDetailController],
   providers: [AppService, FactureService],
 })
 export class AppModule {}
