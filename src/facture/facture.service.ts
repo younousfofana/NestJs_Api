@@ -25,8 +25,8 @@ export class FactureService {
       return this.factureRepository.findOneBy({Id});
     }
 
-    public delete(Id : number)
+    public async delete(Id : number) : Promise<void>
     {
-      return this.factureRepository.delete(Id);
+      await this.factureRepository.delete(Id);
     }
 }

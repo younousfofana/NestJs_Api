@@ -4,10 +4,7 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ClubModule } from './club/club.module';
 import { PaysModule } from './pays/pays.module';
-import { FactureController } from './facture/facture.controller';
-import { FactureService } from './facture/facture.service';
 import { FactureModule } from './facture/facture.module';
-import { FactureDetailController } from './facture-detail/facture-detail.controller';
 import { FactureDetailModule } from './facture-detail/facture-detail.module';
 
 @Module({
