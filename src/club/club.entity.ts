@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Facture } from "src/facture/facture.entity";
+import { Column, Entity, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('club')
 export class Club{
@@ -41,4 +42,7 @@ export class Club{
 
     @Column()
     CodePays : string;
+
+    @OneToOne(() => Facture, (facture) => facture.Id)
+    facture: Facture
 }

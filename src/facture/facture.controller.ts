@@ -1,4 +1,14 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
+import { FactureService } from './facture.service';
 
 @Controller('facture')
-export class FactureController {}
+export class FactureController {
+
+    constructor(private readonly factureService : FactureService){}
+
+    @Get()
+    public findAll()
+    {
+      return this.factureService.findAll();
+    }
+}

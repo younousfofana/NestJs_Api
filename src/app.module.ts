@@ -26,7 +26,7 @@ import { FactureDetailModule } from './facture-detail/facture-detail.module';
     FactureModule,
     FactureDetailModule
   ],
-  controllers: [AppController, FactureController, FactureDetailController],
-  providers: [AppService, FactureService],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
